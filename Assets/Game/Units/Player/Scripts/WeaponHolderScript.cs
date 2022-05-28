@@ -6,21 +6,13 @@ public class WeaponHolderScript : MonoBehaviour
 {
     [SerializeField] private CrosshairController _crossController;
     [SerializeField] private List<WeaponBase> _weapons;
-    [SerializeField] private Button _shootButton;
     [SerializeField] private AudioSource _changeWeaponSound;
     private WeaponBase _currentWeapon;
     private Rigidbody2D _weaponRigidbody;
 
-    public List<WeaponBase> Weapons => _weapons;
-
     private void Awake()
     {
         ChangeWeapon(0);
-    }
-
-    private void OnEnable()
-    {
-        _shootButton.onClick.AddListener(Shoot);
     }
 
     public void Shoot()

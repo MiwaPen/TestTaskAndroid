@@ -1069,7 +1069,7 @@ RectTransform:
   - {fileID: 1581103676}
   - {fileID: 1951838734}
   m_Father: {fileID: 533744621}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1228,7 +1228,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1245,7 +1245,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324533199}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6000005, y: 1.04, z: -10}
+  m_LocalPosition: {x: -1.6000003, y: 1.04, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1764,7 +1764,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5957139, y: 1.3913499, z: -10}
+  m_LocalPosition: {x: -1.5975841, y: 1.39129, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1934,8 +1934,8 @@ RectTransform:
   - {fileID: 915485354}
   - {fileID: 1205838335}
   - {fileID: 10197273}
-  - {fileID: 255769224}
   - {fileID: 1259239764}
+  - {fileID: 255769224}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1997,7 +1997,6 @@ MonoBehaviour:
   - {fileID: 115050950}
   - {fileID: 414979039}
   - {fileID: 2089394493}
-  _shootButton: {fileID: 10197274}
   _changeWeaponSound: {fileID: 589257501}
 --- !u!82 &589257501
 AudioSource:
@@ -5492,7 +5491,7 @@ RectTransform:
   - {fileID: 163663376}
   - {fileID: 1696953622}
   m_Father: {fileID: 533744621}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
