@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
-public class StandartAmmoScript : MonoBehaviour, IPooledObject
+public class StandartAmmoScript : MonoBehaviour, IBullet
 {
     [SerializeField] private float _speed;
     private int _damage;
@@ -13,7 +13,7 @@ public class StandartAmmoScript : MonoBehaviour, IPooledObject
         _transform = transform;
     }
 
-    public void GetFromPool(Transform startPosition, Vector2 direction, int damage)
+    public void Initialize(Transform startPosition, Vector2 direction, int damage)
     {
         _transform.position = startPosition.position;
         _damage = damage;

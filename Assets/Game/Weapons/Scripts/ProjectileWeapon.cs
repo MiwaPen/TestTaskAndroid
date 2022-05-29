@@ -15,7 +15,10 @@ public class ProjectileWeapon : WeaponBase
 
     protected override void MakeShoot()
     {
-        _pool.GetAmmoFromPool(_tag,_throwPos, _transform.right,_damage);
+        IBullet bullet =  _pool.GetAmmoFromPool(_tag);
+        if (bullet != null)
+            bullet.Initialize(_throwPos, _transform.right, _damage);
+        bullet = null;
         PlaySound();
     }
 

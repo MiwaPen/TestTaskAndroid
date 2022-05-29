@@ -35,17 +35,18 @@ public class AmmoPool : MonoBehaviour
         }
     }
 
-    public void GetAmmoFromPool(string tag, Transform startPosition, Vector3 direction, int damage)
+    public IBullet GetAmmoFromPool(string tag)
     {
-        if (!ammoDictinary.ContainsKey(tag) || ammoDictinary.Count == 0) return;
+        if (!ammoDictinary.ContainsKey(tag) || ammoDictinary.Count == 0) return null;
 
         GameObject newAmmo = ammoDictinary[tag].Dequeue();
 
         newAmmo.SetActive(true);
-        newAmmo.TryGetComponent<IPooledObject>(out IPooledObject pooledObject);
-        if (pooledObject != null)
-            pooledObject.GetFromPool(startPosition, direction, damage);
-
+        newAmmo.TryGetComponent<IBullet>(out IBullet pooledObject);
         ammoDictinary[tag].Enqueue(newAmmo);
+        if (pooledObject != null) 
+            return pooledObject;
+        else
+        return null;            
     }
 }

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D),typeof(Collider2D))]
-public class BallisticAmmoScript : MonoBehaviour, IPooledObject
+public class BallisticAmmoScript : MonoBehaviour, IBullet
 {
     [SerializeField] private float _throwForce = 0;
     private Transform _transform;
@@ -14,7 +14,7 @@ public class BallisticAmmoScript : MonoBehaviour, IPooledObject
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    public void GetFromPool(Transform startPosition, Vector2 direction, int damage)
+    public void Initialize(Transform startPosition, Vector2 direction, int damage)
     {
         _transform.position = startPosition.position;
         _damage = damage;
